@@ -7,7 +7,7 @@ public class problem2 {
     // The operation must be performed in place,
     //  meaning you should not use extra space for another array.
     public static void main(String[] args) {
-        int[] arr = {1, 2, 0, 4, 3, 0, 5, 0};
+        int[] arr = {1, 2, 0, 4, 3, 0,8,5, 0};
         pushZerosToEnd(arr);
     }
 
