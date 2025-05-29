@@ -1,15 +1,18 @@
 package ADA;
 
-public class DynamicKnp2 {
+public class DynamicKnapSack {
     public static void main(String[] args) {
-        // int[] price = {10,40,30,20};
-        // int[] weight = {20,30,10,40};
-
-         int price[] = {60,80,50,75,65};
-    int weight[] = {30,45,25,27,18};
-
-        int m  = 105; //Maximum Capacity
+        int[] price = {10,40,30,20};
+        int[] weight = {20,30,10,40};
+        int m  = 70; //Maximum Capacity
         knapSack(price, weight, m);
+
+        //  int price2[] = {60,80,50,75,65};
+        //  int weight2[] = {30,45,25,27,18};
+        //  int m2 = 105;
+        // knapSack(price2, weight2, m2);
+
+
 
     }
 
@@ -146,6 +149,7 @@ public class DynamicKnp2 {
 
         System.out.print("Maximum Profit :- ");
         System.out.print(maxprofit);
+        System.out.println();
 
 
 
@@ -158,7 +162,7 @@ public class DynamicKnp2 {
     }
        }
 
-// Step 2: Backtrack
+// Backtrack
 int[] result = new int[n];
 int profit = maxprofit;
 int weightNow = finalWeight;
