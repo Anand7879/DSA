@@ -2,10 +2,13 @@ package ADA;
 
 public class DynamicKnp2 {
     public static void main(String[] args) {
-        int[] price = {10,40,30,20};
-        int[] weight = {20,30,10,40};
+        // int[] price = {10,40,30,20};
+        // int[] weight = {20,30,10,40};
 
-        int m  = 70; //Maximum Capacity
+         int price[] = {60,80,50,75,65};
+    int weight[] = {30,45,25,27,18};
+
+        int m  = 105; //Maximum Capacity
         knapSack(price, weight, m);
 
     }
@@ -143,7 +146,48 @@ public class DynamicKnp2 {
 
         System.out.print("Maximum Profit :- ");
         System.out.print(maxprofit);
- 
+
+
+
+// Find (maxProfit, weight) pair in touple[n]
+         int finalWeight = 0;
+     for (int j = 0; j < pairCount[n]; j++) {
+      if (touple[n][j][0] == maxprofit) {
+        finalWeight = touple[n][j][1];
+        break;
+    }
+       }
+
+// Step 2: Backtrack
+int[] result = new int[n];
+int profit = maxprofit;
+int weightNow = finalWeight;
+
+for (int i = n; i > 0; i--) {
+    boolean foundInPrev = false;
+    for (int j = 0; j < pairCount[i - 1]; j++) {
+        if (touple[i - 1][j][0] == profit && touple[i - 1][j][1] == weightNow) {
+            // Found same pair → item i-1 not selected
+            result[i - 1] = 0;
+            foundInPrev = true;
+            break;
+        }
+    }
+
+    if (!foundInPrev) {
+        // Not found → item i-1 was selected
+        result[i - 1] = 1;
+        profit -= price[i - 1];
+        weightNow -= weight[i - 1];
+    }
+}
+
+// Step 3: Print selected items
+System.out.println("\nSelected Items (0/1):");
+for (int k = 0; k < n; k++) {
+    System.out.print(result[k] + " ");
+}
+System.out.println();
 
 
     }
