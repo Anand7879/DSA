@@ -1,0 +1,153 @@
+package ADA;
+
+public class DynamicKnp2 {
+    public static void main(String[] args) {
+        int[] price = {10,40,30,20};
+        int[] weight = {20,30,10,40};
+
+        int m  = 70; //Maximum Capacity
+        knapSack(price, weight, m);
+
+    }
+
+    static int MergingPerging(int[][] temp,int[][][] touple,int m,int[] pairCount,int idx){
+
+        int[][] Additional = new int[2*pairCount[idx-1]][2];
+        int count = 0;
+        pairCount[idx] = 0;
+        
+        for(int i = 0; i<pairCount[idx-1]; i++)
+        {
+           if(touple[idx-1][i][1] <= m){
+                Additional[count][0] = touple[idx-1][i][0];
+                Additional[count][1] = touple[idx-1][i][1];
+                count++;
+           }
+        }
+
+        for(int i = 0; i<pairCount[idx-1]; i++)
+        {
+           if(temp[i][1] <= m){
+                Additional[count][0] = temp[i][0];
+                Additional[count][1] = temp[i][1];
+                count++;
+           }
+        }
+        boolean[] discard = new boolean[count];
+
+        for(int i = 0; i<count; i++)
+        {
+            int pi = Additional[i][0];
+            int wi = Additional[i][1];
+
+
+               for(int j = 0; j<count; j++)
+               {
+                   
+                if(i==j)  continue;
+
+                int pj = Additional[j][0];
+                int wj = Additional[j][1];
+
+                if(pi > pj && wi < wj)
+                {
+                    discard[j] = true;
+                }
+
+               }
+        }
+        int resultCount = 0;
+
+        for(int i = 0; i<count; i++)
+        {
+            if(discard[i]) continue;
+            
+            int pi = Additional[i][0];
+            int wi = Additional[i][1];
+
+            boolean duplicate = false;
+
+
+            for(int k = 0; k<resultCount; k++)
+            {
+                if(touple[idx][k][0] == pi && touple[idx][k][1] == wi)
+                {
+                    duplicate = true;
+                    break;
+                }
+            }
+           if(!duplicate){
+
+             touple[idx][resultCount][0] = pi;
+             touple[idx][resultCount][1] = wi;
+             pairCount[idx]++;
+             resultCount++;
+
+            }     
+        }
+
+        
+        
+        System.out.print("S"+idx+" = ");
+        for(int i = 0; i< pairCount[idx]; i++)
+        {
+            System.out.print("("+ touple[idx][i][0] + ", "+ touple[idx][i][1] +")" + ", ");
+        }
+        System.out.println();
+        System.out.println();
+
+       
+        return idx+=1;
+
+    }
+
+     static void knapSack(int[] price , int[] weight, int m)
+    {
+      int n = price.length;
+      int idx = 1;
+      int max = 1000;
+      int[][][] touple = new int[n+1][max][2];
+      
+      touple[0][0][0] = 0;
+      touple[0][0][1] = 0;
+
+      int[] pairCount = new int[n+1];
+
+      pairCount[0] = 1;
+
+      for(int i  = 0; i<n; i++){
+
+        int x = price[i];
+        int y = weight[i];
+        
+        int[][]temp = new int[pairCount[i]][2];
+        for(int j = 0; j<pairCount[i]; j++)
+        {
+             temp[j][0] = touple[i][j][0]+x;
+             temp[j][1] = touple[i][j][1]+y;
+        }
+
+         idx = MergingPerging(temp, touple, m, pairCount, idx);
+
+        }
+        
+        int maxprofit = 0; 
+
+        for(int j = 0; j<pairCount[n]; j++)
+        {
+            if(touple[n][j][0]>maxprofit)
+            {
+                maxprofit = touple[n][j][0];
+            }
+        }
+
+        System.out.print("Maximum Profit :- ");
+        System.out.print(maxprofit);
+ 
+
+
+    }
+    
+
+
+}

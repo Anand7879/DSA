@@ -1,21 +1,11 @@
 package POTD;
 
-import java.util.Arrays;
+// import java.util.Arrays;
 
 public class Day3 {
 
     public static void main(String[] args) {
         System.out.println(kthSmallest(3,3,5));
-    }
-
-
-    
-    public static int countLessEqual(int mid, int m, int n) {
-        int count = 0;
-        for (int i = 1; i <= m; i++) {
-            count += Math.min(mid / i, n);
-        }
-        return count;
     }
 
     public static int kthSmallest(int m, int n, int k) {
@@ -51,7 +41,12 @@ public class Day3 {
 
     while (low < high) {
         int mid = low + (high - low) / 2;
-        int count = countLessEqual(mid, m, n);
+        int count = 0;
+
+        for(int i = 1; i<=m; i++)
+        {
+            count+=Math.min(mid/i, n);
+        }
 
         if (count < k) {
             low = mid + 1;
