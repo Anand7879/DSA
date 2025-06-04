@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Problem6",
+            "request": "launch",
+            "mainClass": "GFG160.Problem6",
+            "projectName": "DSA_c4f6b532"
+        },
+        {
+            "type": "java",
             "name": "something",
             "request": "launch",
             "mainClass": "something",
