@@ -53,9 +53,9 @@ void Hamilton(int k) {
 
 int main() {
 
-    //n = 5; // Number of vertices
+    // n = 5; // Number of vertices
 
-    // for (int i = 1; i <= n; i++)
+    // for (int i = 1; i <= n; i++)  
     //     for (int j = 1; j <= n; j++)
     //         G[i][j] = 0;
 
