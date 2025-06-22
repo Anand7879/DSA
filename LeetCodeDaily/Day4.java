@@ -1,5 +1,5 @@
-// Date 20th june 2025
-// Day Friday
+// Date 21th june 2025
+// Day Saturday
 
 // You are given a string word and an integer k.
 // We consider word to be k-special if |freq(word[i]) - freq(word[j])| <= k for all indices i and j in the string.
