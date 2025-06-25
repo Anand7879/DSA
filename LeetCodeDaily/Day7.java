@@ -1,5 +1,5 @@
 // Date 24th june 2025
-// Day sunday
+// Day tuesday
 
 
 // You are given a 0-indexed integer array nums and two integers key and k. 
