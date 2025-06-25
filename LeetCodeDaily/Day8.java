@@ -40,6 +40,8 @@ public class Day8 {
 
 // Optimise Solution
 
+
+
      public static long kthSmallestProduct(int[] nums1, int[] nums2, long k) {
         long left = -1_000_000_0000L;  // Minimum possible product
         long right = 1_000_000_0000L;  // Maximum possible product
