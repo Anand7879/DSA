@@ -38,10 +38,6 @@ public class Day8 {
     // }
 
 
-
-
-
-
 // Optimise Solution
 
      public static long kthSmallestProduct(int[] nums1, int[] nums2, long k) {
