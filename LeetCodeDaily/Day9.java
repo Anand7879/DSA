@@ -16,7 +16,6 @@ public class Day9 {
 
         String str = "1001010";
         int k = 5;
-
         System.out.println(longestSubsequence(str, k));
         
     }
