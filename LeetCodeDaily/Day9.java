@@ -14,11 +14,14 @@ public class Day9 {
 
     public static void main(String[] args) {
 
-        String str = "1"
+        String str = "1001010";
+        int k = 5;
+
+        System.out.println(longestSubsequence(str, k));
         
     }
     
-    public int longestSubsequence(String s, int k) {
+    public static int longestSubsequence(String s, int k) {
         int count = 0;       // Final result
         long val = 0;        // Current value of subsequence
         int pow = 0;         // Bit position (0 for LSB)
