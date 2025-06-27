@@ -11,10 +11,12 @@ import java.util.Queue;
 
 public class Day10 {
     public static void main(String[] args) {
-        
+       String s = "letsleetcode";
+       int k = 2;
+       System.out.println(longestSubsequenceRepeatedK(s, k));
     }
 
-    public String longestSubsequenceRepeatedK(String s, int k) {
+    public static String longestSubsequenceRepeatedK(String s, int k) {
         Map<Character, Integer> freq = new HashMap<>();
         for (char c : s.toCharArray()) {
             freq.put(c, freq.getOrDefault(c, 0) + 1);
