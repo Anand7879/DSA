@@ -60,7 +60,7 @@ public class Day10 {
         return ans;
     }
 
-    private boolean isKRepeatedSubsequence(String s, String sub, int k) {
+    private static boolean isKRepeatedSubsequence(String s, String sub, int k) {
         String repeated = sub.repeat(k);
         int i = 0;
         for (char c : s.toCharArray()) {
