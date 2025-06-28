@@ -8,9 +8,11 @@ import java.util.PriorityQueue;
 
 public class Day11 {
     public static void main(String[] args) {
-        
+       int[] nums = {2,1,3,3};
+       int k = 2;
+       System.out.println(maxSubsequence(nums, k));
     }
-    public int[] maxSubsequence(int[] nums, int k) {
+    public static int[] maxSubsequence(int[] nums, int k) {
         // PriorityQueue to keep track of k largest elements with their indices
         PriorityQueue<int[]> minHeap = new PriorityQueue<>(
             (a, b) -> Integer.compare(a[0], b[0]) // compare by value
