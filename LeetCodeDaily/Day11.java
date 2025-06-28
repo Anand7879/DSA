@@ -2,15 +2,20 @@
 // Day saturday
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
 import java.util.PriorityQueue;
 
 public class Day11 {
     public static void main(String[] args) {
-       int[] nums = {2,1,3,3};
-       int k = 2;
-       System.out.println(maxSubsequence(nums, k));
+
+         int[] nums = {2, 1, 3, 3};
+        int k = 2;
+        int[] result = maxSubsequence(nums, k);
+
+        System.out.println("Subsequence with largest sum of length " + k + ":");
+        System.out.println(Arrays.toString(result));
     }
     public static int[] maxSubsequence(int[] nums, int k) {
         // PriorityQueue to keep track of k largest elements with their indices
