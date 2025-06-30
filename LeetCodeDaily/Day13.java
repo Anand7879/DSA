@@ -6,10 +6,11 @@ import java.util.Map;
 
 public class Day13 {
     public static void main(String[] args) {
-        
+        int[] nums = {1,3,2,2,5,2,3,7};
+        System.out.println(findLHS(nums));
     }
 
-     public int findLHS(int[] nums) {
+     public static int findLHS(int[] nums) {
         Map<Integer, Integer> map = new HashMap<>();
         
         // Count frequencies
