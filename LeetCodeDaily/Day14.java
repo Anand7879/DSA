@@ -6,6 +6,7 @@ public class Day14 {
         String word = "abbcccc";
         System.out.println(possibleStringCount(word));
     }
+    
     public static int possibleStringCount(String word) {
         int ans = 1;  // count the "no long‑press" case
         for (int i = 1; i < word.length(); i++) {
