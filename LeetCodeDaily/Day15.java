@@ -3,6 +3,8 @@
 import java.util.*;
 public class Day15 {
     public static void main(String[] args) {
+        String word = "aabbccdd";
+        int k = 7;
     }
 
     private static final int MOD = 1_000_000_007;
