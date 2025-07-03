@@ -6,7 +6,7 @@ public class Day16 {
         System.out.println(kthCharacter(k));
     }
 
-    public char kthCharacter(int k) {
+    public static char kthCharacter(int k) {
         // The k-th character is 'a' + number of 1-bits in (k - 1)
         return (char) ('a' + Integer.bitCount(k - 1));
     }
