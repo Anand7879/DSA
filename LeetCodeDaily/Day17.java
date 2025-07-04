@@ -3,17 +3,17 @@
 
 public class Day17 {
     public static void main(String[] args) {
-    //    int k = 5;
+    //    long k = 5;
     //    int[] operations = {0,0,0};
-
-      int k = 10;
-       int[] operations = {0,1,0,1};
     //    System.out.println(kthCharacter(k, operations));
-    kthCharacter(k, operations);
+
+      long k = 10;
+       int[] operations = {0,1,0,1};
+           System.out.println(kthCharacter(k, operations));
 
     }
 
-    public static void kthCharacter(long k, int[] operations) {
+    public static char kthCharacter(long k, int[] operations) {
         StringBuilder str = new StringBuilder();
         str.append("a");
 
@@ -21,18 +21,38 @@ public class Day17 {
         {
             if(operations[i]==0)
             {
-                str.append('a');
+                str.append(str);
             }else{
-                for(int j = 0; j<str.length(); j++)
-                {
-                    char nextchar =  (char) (str.charAt(i)+1);
-                    str.append(nextchar);
-                }
+                int len = str.length(); 
+                for (int j = 0; j < len; j++) {
+                    char nextChar = (char)(str.charAt(j) + 1);
+                    str.append(nextChar);
             }
 
         }
 
-        System.out.println(str);
-            
     }
+    return str.charAt((int)k - 1);
+}
+
+// Optimal Solution
+
+    public char kthCharacter(long k, int[] operations) {
+        int increases = 0;
+        int ops = (int) Math.ceil(Math.log(k) / Math.log(2));
+
+        for (int i = ops - 1; i >= 0; i--) {
+            long half = 1L << i;
+            if (k > half) {
+                k -= half;
+                increases += operations[i];
+            }
+        }
+
+        return (char)('a' + increases % 26);
+    }
+
+
+
+
 }
