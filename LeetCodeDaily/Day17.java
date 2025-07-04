@@ -37,20 +37,20 @@ public class Day17 {
 
 // Optimal Solution
 
-    public char kthCharacter(long k, int[] operations) {
-        int increases = 0;
-        int ops = (int) Math.ceil(Math.log(k) / Math.log(2));
+    // public char kthCharacter(long k, int[] operations) {
+    //     int increases = 0;
+    //     int ops = (int) Math.ceil(Math.log(k) / Math.log(2));
 
-        for (int i = ops - 1; i >= 0; i--) {
-            long half = 1L << i;
-            if (k > half) {
-                k -= half;
-                increases += operations[i];
-            }
-        }
+    //     for (int i = ops - 1; i >= 0; i--) {
+    //         long half = 1L << i;
+    //         if (k > half) {
+    //             k -= half;
+    //             increases += operations[i];
+    //         }
+    //     }
 
-        return (char)('a' + increases % 26);
-    }
+    //     return (char)('a' + increases % 26);
+    // }
 
 
 
