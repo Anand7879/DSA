@@ -22,6 +22,9 @@ public class Day18 {
 
         // return largestLucky;
 
+
+
+    // Optinmal solution     
           int[] freq = new int[501]; // Since constraints say elements are from 1 to 500
 
         // Count frequency
