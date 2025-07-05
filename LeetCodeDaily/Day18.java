@@ -7,20 +7,36 @@ public class Day18 {
         System.out.println(findLucky(arr));
     }
          public static int findLucky(int[] arr) {
-             HashMap<Integer,Integer> freqMap = new HashMap<>();
-             for (int i : arr) {
-                freqMap.put(i, freqMap.getOrDefault(i,0)+1);
-             }
-        int largestLucky = -1;
+        //      HashMap<Integer,Integer> freqMap = new HashMap<>();
+        //      for (int i : arr) {
+        //         freqMap.put(i, freqMap.getOrDefault(i,0)+1);
+        //      }
+        // int largestLucky = -1;
 
-        for (int key : freqMap.keySet()) {
-            if(key==freqMap.get(key))
-            {
-                largestLucky = Math.max(largestLucky, key);
+        // for (int key : freqMap.keySet()) {
+        //     if(key==freqMap.get(key))
+        //     {
+        //         largestLucky = Math.max(largestLucky, key);
+        //     }
+        // }
+
+        // return largestLucky;
+
+          int[] freq = new int[501]; // Since constraints say elements are from 1 to 500
+
+        // Count frequency
+        for (int num : arr) {
+            freq[num]++;
+        }
+
+        // Check for lucky integers from high to low
+        for (int i = 500; i >= 1; i--) {
+            if (freq[i] == i) {
+                return i;
             }
         }
 
-        return largestLucky;
+        return -1;
     }
 
 }
