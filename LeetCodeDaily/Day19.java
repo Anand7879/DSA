@@ -41,7 +41,7 @@ public int count(int tot) {
 }
 }
 
-public class Main {
+public class Day19{
 public static void main(String[] args) {
 int[] nums1 = {1, 1, 2, 2, 2, 3};
 int[] nums2 = {1, 4, 5, 2, 5, 4};
