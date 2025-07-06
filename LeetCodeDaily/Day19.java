@@ -54,4 +54,5 @@ int[] nums2 = {1, 4, 5, 2, 5, 4};
     obj.add(0, 1); // nums2[0] += 1 → nums2[0] = 2
     System.out.println("count(6): " + obj.count(6)); // Expected: 3
 }
+
 }
