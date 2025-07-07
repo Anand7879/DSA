@@ -4,6 +4,7 @@
 import java.util.Arrays;
 import java.util.PriorityQueue;
 
+
 public class Day20 {
     public static void main(String[] args) {
        int[][] events = {{1,2},{2,3},{3,4}};
