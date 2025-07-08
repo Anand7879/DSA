@@ -3,7 +3,10 @@
 import java.util.*;
 public class Day21 {
     public static void main(String[] args) {
-        
+       int[][]events = {{1,2,4},
+                      {3,4,3},{2,3,10}};
+       int k = 2;
+       System.out.println(maxValue(null, k));
     }
     public static int maxValue(int[][] events, int k) {
         Arrays.sort(events, (a, b) -> Integer.compare(a[0], b[0])); // Sort by start time
