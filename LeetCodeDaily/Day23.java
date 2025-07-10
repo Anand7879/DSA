@@ -4,8 +4,9 @@ public class Day23 {
     public static void main(String[] args) {
         int eventTime = 5;
         int[] startTime = {1,3}, endTime = {2,5};
+        System.out.println(maxFreeTime(eventTime, startTime, endTime));
     }
-    public int maxFreeTime(int eventTime, int[] startTime, int[] endTime) {
+    public static int maxFreeTime(int eventTime, int[] startTime, int[] endTime) {
         int n = startTime.length;
 
         // Step 1: Calculate gaps
