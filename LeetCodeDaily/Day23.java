@@ -2,7 +2,8 @@
 // Day Thursday
 public class Day23 {
     public static void main(String[] args) {
-        
+        int eventTime = 5;
+        int[] startTime = {1,3}, endTime = {2,5};
     }
     public int maxFreeTime(int eventTime, int[] startTime, int[] endTime) {
         int n = startTime.length;
