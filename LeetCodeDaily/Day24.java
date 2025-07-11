@@ -3,7 +3,9 @@
 import java.util.*;
 public class Day24 {
     public static void main(String[] args) {
-        
+        int n = 2;
+        int[][] meetings = {{0,10},{1,5},{2,7},{3,4}};
+        System.out.println(mostBooked(n, meetings));
     }
 
     public static int mostBooked(int n, int[][] meetings) {
