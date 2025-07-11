@@ -1,6 +1,6 @@
 //Date 11th july 2025
 // Day Friday
-
+import java.util.*;
 public class Day24 {
     public static void main(String[] args) {
         
