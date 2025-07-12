@@ -1,6 +1,6 @@
 public class Day25 {
     public static void main(String[] args) {
-        n = 11, firstPlayer = 2, secondPlayer = 4
+        int n = 11, firstPlayer = 2, secondPlayer = 4;
     }
 
     private final int INF = 1000;
