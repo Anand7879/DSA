@@ -1,9 +1,10 @@
 public class Day25 {
     public static void main(String[] args) {
         int n = 11, firstPlayer = 2, secondPlayer = 4;
+        System.out.println(earliestAndLatest(n, firstPlayer, secondPlayer));
     }
 
-    private final int INF = 1000;
+    private static final int INF = 1000;
     // memo[l][r][k][0] = earliest round, memo[l][r][k][1] = latest round
     private static int[][][][] memo;
 
