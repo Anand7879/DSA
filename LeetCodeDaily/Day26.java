@@ -3,7 +3,8 @@
 import java.util.*;
 public class Day26 {
     public static void main(String[] args) {
-        
+       int[] players = {4,7,9}, trainers = {8,2,5,8};
+       System.out.println(matchPlayersAndTrainers(players, trainers));
     }
 
     public static int matchPlayersAndTrainers(int[] players, int[] trainers) {
