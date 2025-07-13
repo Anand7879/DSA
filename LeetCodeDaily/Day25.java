@@ -1,3 +1,5 @@
+//Date 12th july 2025
+// Day Saturday
 public class Day25 {
     public static void main(String[] args) {
         int n = 11, firstPlayer = 2, secondPlayer = 4;
