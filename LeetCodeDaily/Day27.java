@@ -16,7 +16,7 @@
     }
 }
 
-public class Solution {
+public class Day27{
     
     public int getDecimalValue(ListNode head) {
         int result = 0;
@@ -34,7 +34,7 @@ public class Solution {
         ListNode second = new ListNode(0, third);
         ListNode first = new ListNode(1, second);
 
-        Solution solution = new Solution();
+        Day27 solution = new Day27();
         int decimalValue = solution.getDecimalValue(first);
         
         System.out.println("Decimal value of binary linked list: " + decimalValue);
