@@ -6,6 +6,7 @@ public class Day29 {
         
     }
 
+    
     public int maximumLength(int[] nums) {
         // Strategy 1: All adjacent pairs have the same parity
         int sameParityLength = 1;
