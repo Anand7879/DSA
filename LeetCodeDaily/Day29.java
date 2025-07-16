@@ -7,29 +7,27 @@ public class Day29 {
     }
 
     public int maximumLength(int[] nums) {
-        // Strategy 1: All adjacent pairs have the same parity
-        int sameParityLength = 1;
-        int lastSame = nums[0];
-        
-        for (int i = 1; i < nums.length; i++) {
-            if ((nums[i] % 2) == (lastSame % 2)) {
-                sameParityLength++;
-                lastSame = nums[i];
-            }
+        // For each number parity (0 = even, 1 = odd),
+        // we store the best length ending with that parity
+        int[] evenSum = new int[2]; // evenSum[parity]: longest subseq ending in parity with even sum
+        int[] oddSum = new int[2];  // oddSum[parity]: ... with odd sum
+
+        int maxLen = 1;
+
+        for (int num : nums) {
+            int p = num % 2;
+
+            // New values based on previous best subsequences
+            int newEven = evenSum[p] + 1;       // Extend same parity (even sum)
+            int newOdd = oddSum[1 - p] + 1;     // Extend alternate parity (odd sum)
+
+            // Update
+            evenSum[p] = Math.max(evenSum[p], newEven);
+            oddSum[p] = Math.max(oddSum[p], newOdd);
+
+            maxLen = Math.max(maxLen, Math.max(evenSum[p], oddSum[p]));
         }
 
-        // Strategy 2: All adjacent pairs have different parity
-        int altParityLength = 1;
-        int lastAlt = nums[0];
-
-        for (int i = 1; i < nums.length; i++) {
-            if ((nums[i] % 2) != (lastAlt % 2)) {
-                altParityLength++;
-                lastAlt = nums[i];
-            }
-        }
-
-        return Math.max(sameParityLength, altParityLength);
+        return maxLen;
     }
 }
-
