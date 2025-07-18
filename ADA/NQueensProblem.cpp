@@ -3,7 +3,6 @@ using namespace std;
 #define MAX 100
 int X[MAX];     
 
-
 bool place(int i, int j)
 {
     for(int k = 1; k<=i-1; k++)
