@@ -1,5 +1,6 @@
 #include<iostream>
 using namespace std;
+
 void solve(string x, string y, int a, int b)
 {
       int A[a+1][b+1];
