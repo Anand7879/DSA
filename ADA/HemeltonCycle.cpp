@@ -6,6 +6,7 @@ int G[MAX][MAX];
 int X[MAX];     
 int n;         
 
+
 void Nextval(int k) {
     while (true) {
         X[k] = (X[k] + 1) % (n + 1);
