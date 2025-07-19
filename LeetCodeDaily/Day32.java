@@ -9,7 +9,7 @@ public class Day32 {
         Day32 obj = new Day32();
         List<String> result = obj.removeSubfolders(folderArray);
 
-        System.out.println(result); // Output: [/a, /c/d, /c/f]
+        System.out.println(result); 
     }
 
     public List<String> removeSubfolders(String[] folder) {
