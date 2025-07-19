@@ -2,7 +2,6 @@
 // Day: Saturday
 
 import java.util.*;
-
 public class Day32 {
     public static void main(String[] args) {
         String[] folderArray = {"/a", "/a/b", "/c/d", "/c/d/e", "/c/f"};
