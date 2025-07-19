@@ -23,7 +23,6 @@ public class Day32 {
                 result.add(current);
             }
         }
-
         return result;
     }
 }
