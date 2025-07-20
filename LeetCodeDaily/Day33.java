@@ -82,8 +82,8 @@ public class Day33 {
         );
 
         List<List<String>> output = sol.deleteDuplicateFolder(input);
-        for (List<String> path : output) {
-            System.out.println(path);
-        }
+for (List<String> path : output) {
+    System.out.println(String.join("/", path));
+}
     }
 }
