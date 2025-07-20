@@ -7,12 +7,12 @@ class Solution {
         boolean isDeleted = false;
     }
 
-    Node root = new Node();
+    Node root = new Node();  // dummy root (not an actual folder)
     Map<String, Integer> serialFreq = new HashMap<>();
     Map<String, List<Node>> serialToNodes = new HashMap<>();
 
     public List<List<String>> deleteDuplicateFolder(List<List<String>> paths) {
-        // Step 1: Build tree
+        // Step 1: Build the tree
         for (List<String> path : paths) {
             Node curr = root;
             for (String folder : path) {
@@ -22,10 +22,12 @@ class Solution {
             }
         }
 
-        // Step 2: Serialize and collect frequencies
-        serialize(root);
+        // Step 2: Serialize all children of root (skip dummy root)
+        for (Node child : root.children.values()) {
+            serialize(child);
+        }
 
-        // Step 3: Mark duplicates (if serial appears > 1)
+        // Step 3: Mark duplicates
         for (Map.Entry<String, List<Node>> entry : serialToNodes.entrySet()) {
             if (serialFreq.get(entry.getKey()) > 1) {
                 for (Node node : entry.getValue()) {
@@ -36,7 +38,10 @@ class Solution {
 
         // Step 4: Collect valid paths
         List<List<String>> result = new ArrayList<>();
-        collectPaths(root, new ArrayList<>(), result);
+        for (Node child : root.children.values()) {
+            collectPaths(child, new ArrayList<>(), result);
+        }
+
         return result;
     }
 
@@ -56,34 +61,15 @@ class Solution {
     }
 
     private void collectPaths(Node node, List<String> path, List<List<String>> result) {
-        for (Map.Entry<String, Node> entry : node.children.entrySet()) {
-            Node child = entry.getValue();
-            if (child.isDeleted) continue;
+        if (node.isDeleted) return;
 
-            path.add(child.name);
-            result.add(new ArrayList<>(path));
+        path.add(node.name);
+        result.add(new ArrayList<>(path));
+
+        for (Node child : node.children.values()) {
             collectPaths(child, path, result);
-            path.remove(path.size() - 1);
         }
-    }
-}
 
-
-public class Day33 {
-    public static void main(String[] args) {
-        Solution sol = new Solution();
-        List<List<String>> input = List.of(
-            List.of("a"),
-            List.of("a", "x"),
-            List.of("a", "y"),
-            List.of("b"),
-            List.of("b", "x"),
-            List.of("b", "y")
-        );
-
-        List<List<String>> output = sol.deleteDuplicateFolder(input);
-for (List<String> path : output) {
-    System.out.println(String.join("/", path));
-}
+        path.remove(path.size() - 1);
     }
 }
