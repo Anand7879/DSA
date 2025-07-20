@@ -73,3 +73,28 @@ class Solution {
         path.remove(path.size() - 1);
     }
 }
+
+public class Day33 {
+    public static void main(String[] args) {
+        Solution sol = new Solution();
+
+        List<List<String>> input = List.of(
+            List.of("a"),
+            List.of("c"),
+            List.of("d"),
+            List.of("a", "b"),
+            List.of("c", "b"),
+            List.of("d", "a")
+        );
+
+        List<List<String>> output = sol.deleteDuplicateFolder(input);
+
+        if (output.isEmpty()) {
+            System.out.println("No remaining folders.");
+        } else {
+            for (List<String> path : output) {
+                System.out.println(String.join("/", path));
+            }
+        }
+    }
+}
