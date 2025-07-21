@@ -30,5 +30,35 @@ public class Day34 {
         }
 
       return str;
+
+
+
+
+
+
+
+// OPtimal Solution
+
+    //    StringBuilder sb = new StringBuilder();
+    //     char prev = s.charAt(0);
+    //     int count = 1;
+    //     sb.append(prev);
+
+    //     for (int i = 1; i < s.length(); i++) {
+    //         char curr = s.charAt(i);
+    //         if (curr == prev) {
+    //             count++;
+    //         } else {
+    //             prev = curr;
+    //             count = 1;
+    //         }
+
+    //         if (count < 3) {
+    //             sb.append(curr);
+    //         }
+    //     }
+
+    //     return sb.toString();
+
     }
 }
