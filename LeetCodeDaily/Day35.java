@@ -23,7 +23,6 @@ public class Day35 {
             maxSum = Math.max(maxSum, currentSum);
             right++;
         }
-
         return maxSum;
     }
 
