@@ -9,7 +9,6 @@
 // Input: nums = [3,6,1,2,5], k = 2
 // Output: 2
 
-import java.util.ArrayList;
 import java.util.Arrays;
 
 public class Day2 {
