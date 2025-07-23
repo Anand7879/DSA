@@ -1,5 +1,6 @@
 // Date: 23rd July 2025
 // Day: Wednesday
+import java.util.*;
 public class Day36 {
 
     public int maximumGain(String s, int x, int y) {
@@ -10,7 +11,7 @@ public class Day36 {
         }
     }
 
-    private int removePattern(String s, String firstPattern, int firstScore, int secondScore) {
+    private static int removePattern(String s, String firstPattern, int firstScore, int secondScore) {
         Stack<Character> stack = new Stack<>();
         int score = 0;
 
