@@ -4,9 +4,12 @@ import java.util.*;
 public class Day36 {
 
     public static void main(String[] args) {
-        
+        String s = "cdbcbbaaabab";
+        int x = 4, y = 5;
+        System.out.println(maximumGain(s, x, y));
+
     }
-    public int maximumGain(String s, int x, int y) {
+    public static int maximumGain(String s, int x, int y) {
         if (x > y) {
             return removePattern(s, "ab", x, y);
         } else {
