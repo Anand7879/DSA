@@ -3,6 +3,9 @@
 import java.util.*;
 public class Day36 {
 
+    public static void main(String[] args) {
+        
+    }
     public int maximumGain(String s, int x, int y) {
         if (x > y) {
             return removePattern(s, "ab", x, y);
