@@ -1,3 +1,5 @@
+// Date: 24th July 2025
+// Day: Thursday
 import java.util.*;
 public class Day37 {
     int[] nums;
