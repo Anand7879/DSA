@@ -1,7 +1,26 @@
 // Date: 24th July 2025
 // Day: Thursday
+
 import java.util.*;
-public class Day37 {
+
+public class Day37{
+    public static void main(String[] args) {
+        // Sample test case
+        int[] nums = {1, 5, 5, 4, 11};
+        int[][] edges = {
+            {0, 1},
+            {1, 2},
+            {1, 3},
+            {3, 4}
+        };
+
+        Solution sol = new Solution();
+        int result = sol.minimumScore(nums, edges);
+        System.out.println("Minimum Score: " + result);
+    }
+}
+
+class Solution {
     int[] nums;
     List<Integer>[] tree;
     int[] xor;
@@ -31,16 +50,15 @@ public class Day37 {
             for (int j = i + 1; j < n; j++) {
                 int a = i, b = j;
                 int xorA = xor[a], xorB = xor[b];
+
                 if (isAncestor(a, b)) {
                     xorA = xor[b];
                     xorB = xor[a] ^ xor[b];
                 } else if (isAncestor(b, a)) {
                     xorA = xor[a];
                     xorB = xor[b] ^ xor[a];
-                } else {
-                    xorA = xor[a];
-                    xorB = xor[b];
                 }
+
                 int xorRest = xor[0] ^ xorA ^ xorB;
                 int max = Math.max(xorA, Math.max(xorB, xorRest));
                 int min = Math.min(xorA, Math.min(xorB, xorRest));
