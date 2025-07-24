@@ -2,7 +2,6 @@
 // Day: Thursday
 
 import java.util.*;
-
 public class Day37{
     public static void main(String[] args) {
         // Sample test case
