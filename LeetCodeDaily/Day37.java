@@ -14,13 +14,13 @@ public class Day37{
             {3, 4}
         };
 
-        Solution sol = new Solution();
+        Solve sol = new Solve();
         int result = sol.minimumScore(nums, edges);
         System.out.println("Minimum Score: " + result);
     }
 }
 
-class Solution {
+class Solve {
     int[] nums;
     List<Integer>[] tree;
     int[] xor;
