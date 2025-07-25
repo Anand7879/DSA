@@ -5,3 +5,24 @@ public class Day38 {
         
     }
 }
+
+public class Solution {
+    public int maxSum(int[] nums) {
+        int max = Integer.MIN_VALUE;
+
+        // Use array to track seen elements (-100 to 100 => 201 range)
+        boolean[] seen = new boolean[201]; // Index offset: x + 100
+        int sum = 0;
+
+        for (int x : nums) {
+            max = Math.max(max, x);
+            if (x > 0 && !seen[x + 100]) {
+                seen[x + 100] = true;
+                sum += x;
+            }
+        }
+
+        return (max <= 0) ? max : sum;
+    }
+}
+
