@@ -4,10 +4,8 @@ public class Day38 {
     public static void main(String[] args) {
         
     }
-}
 
-public class Solution {
-    public int maxSum(int[] nums) {
+    public static int maxSum(int[] nums) {
         int max = Integer.MIN_VALUE;
 
         // Use array to track seen elements (-100 to 100 => 201 range)
