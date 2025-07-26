@@ -6,7 +6,11 @@ import java.util.List;
 
 public class Day39 {
     public static void main(String[] args) {
-        
+        int n = 5;
+        int[][] conflictingPairs = { {1, 3}, {2, 4}, {2, 5} };
+
+        long result = maxSubarrays(n, conflictingPairs);
+        System.out.println("Maximum valid subarrays: " + result);
     }
 
   public static long maxSubarrays(int n, int[][] conflictingPairs) {
