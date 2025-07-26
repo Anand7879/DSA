@@ -8,8 +8,8 @@ public class Day39 {
     public static void main(String[] args) {
         
     }
-    class Solution {
-  public long maxSubarrays(int n, int[][] conflictingPairs) {
+
+  public static long maxSubarrays(int n, int[][] conflictingPairs) {
     long valid = 0;
     int maxLeft = 0, secondMaxLeft = 0;
     long[] gains = new long[n + 1];
@@ -42,4 +42,3 @@ public class Day39 {
   }
 }
 
-}
