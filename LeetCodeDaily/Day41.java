@@ -3,7 +3,6 @@ public class Day41 {
         
     }
     int max = 0, count = 0;
-
     public int countMaxOrSubsets(int[] nums) {
         // Step 1: Find max OR of the array
         for (int num : nums) {
