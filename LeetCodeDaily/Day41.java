@@ -2,8 +2,6 @@ public class Day41 {
     public static void main(String[] args) {
         
     }
-}
-
     int max = 0, count = 0;
 
     public int countMaxOrSubsets(int[] nums) {
