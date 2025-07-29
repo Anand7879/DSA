@@ -4,7 +4,8 @@ import java.util.*;
 
 public class Day42 {
     public static void main(String[] args) {
-        
+        int[] nums = {1, 0, 2, 1, 3};
+        System.out.println(Arrays.toString(smallestSubarrays(nums)));
     }
 
     public static int[] smallestSubarrays(int[] nums) {
