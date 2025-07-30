@@ -10,8 +10,7 @@ public class Day43 {
 
     public static int longestSubarray(int[] nums) {
         int max = 0;
-
-        // Step 1: Find the maximum value in the array
+        
         for (int num : nums) {
             max = Math.max(max, num);
         }
