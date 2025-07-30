@@ -7,7 +7,7 @@ public class Day43 {
         int result = longestSubarray(nums);
         System.out.println("Longest subarray with max AND: " + result);
     }
-    
+
     public static int longestSubarray(int[] nums) {
         int max = 0;
 
@@ -28,7 +28,6 @@ public class Day43 {
                 currentLength = 0;
             }
         }
-
         return maxLength;
     }
 }
