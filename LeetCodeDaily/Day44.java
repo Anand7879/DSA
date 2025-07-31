@@ -16,10 +16,8 @@ public class Day44 {
         int[] A3 = {1, 1, 2};
         System.out.println(sol.subarrayBitwiseORs(A3)); // example: distinct ORs are {1,2,3} -> 3
     }
-}
 
-public class Solution {
-    public int subarrayBitwiseORs(int[] A) {
+    public static int subarrayBitwiseORs(int[] A) {
         Set<Integer> result = new HashSet<>();
         Set<Integer> prev = new HashSet<>();
         
