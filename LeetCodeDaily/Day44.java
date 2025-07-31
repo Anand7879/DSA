@@ -6,15 +6,15 @@ import java.util.Set;
 public class Day44 {
     
     public static void main(String[] args) {
-        Solution sol = new Solution();
+
         int[] A1 = {1, 2, 4};
-        System.out.println(sol.subarrayBitwiseORs(A1)); // expected 6
+        System.out.println(subarrayBitwiseORs(A1)); // expected 6
     
         int[] A2 = {0};
-        System.out.println(sol.subarrayBitwiseORs(A2)); // expected 1
+        System.out.println(subarrayBitwiseORs(A2)); // expected 1
     
         int[] A3 = {1, 1, 2};
-        System.out.println(sol.subarrayBitwiseORs(A3)); // example: distinct ORs are {1,2,3} -> 3
+        System.out.println(subarrayBitwiseORs(A3)); // example: distinct ORs are {1,2,3} -> 3
     }
 
     public static int subarrayBitwiseORs(int[] A) {
