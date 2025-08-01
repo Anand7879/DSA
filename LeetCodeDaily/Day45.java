@@ -14,7 +14,6 @@ public class Day45 {
     
 }
 
-public class Solution {
     public List<List<Integer>> generate(int numRows) {
         List<List<Integer>> triangle = new ArrayList<>();
         if (numRows <= 0) return triangle;
