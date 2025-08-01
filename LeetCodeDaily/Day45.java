@@ -4,7 +4,6 @@
 import java.util.*;
 public class Day45 {
     public static void main(String[] args) {
-        Solution sol = new Solution();
         int numRows = 5;
         List<List<Integer>> result = sol.generate(numRows);
         for (List<Integer> row : result) {
