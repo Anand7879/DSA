@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Day45",
+            "request": "launch",
+            "mainClass": "Day45",
+            "projectName": "DSA_c4f6b532"
+        },
+        {
+            "type": "java",
             "name": "Day44",
             "request": "launch",
             "mainClass": "Day44",

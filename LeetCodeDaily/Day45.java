@@ -10,8 +10,6 @@ public class Day45 {
             System.out.println(row);
         }
     }
-    
-}
 
     public static List<List<Integer>> generate(int numRows) {
         List<List<Integer>> triangle = new ArrayList<>();
@@ -36,6 +34,5 @@ public class Day45 {
         return triangle;
     }
 
-    // For testing
 }
 
