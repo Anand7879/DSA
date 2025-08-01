@@ -5,7 +5,7 @@ import java.util.*;
 public class Day45 {
     public static void main(String[] args) {
         int numRows = 5;
-        List<List<Integer>> result = sol.generate(numRows);
+        List<List<Integer>> result = generate(numRows);
         for (List<Integer> row : result) {
             System.out.println(row);
         }
@@ -13,7 +13,7 @@ public class Day45 {
     
 }
 
-    public List<List<Integer>> generate(int numRows) {
+    public static List<List<Integer>> generate(int numRows) {
         List<List<Integer>> triangle = new ArrayList<>();
         if (numRows <= 0) return triangle;
 
