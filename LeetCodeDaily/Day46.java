@@ -6,10 +6,10 @@ import java.util.*;
 public class Day46 {
     public static void main(String[] args) {
 
-        int[] basket1 = {1, 2, 2};
-        int[] basket2 = {2, 1, 1};
+        int[] basket1 = {4,2,2,2};
+        int[] basket2 = {1,4,1,2};
 
-        System.out.println(minCost(basket1, basket2)); // Output: 1
+        System.out.println(minCost(basket1, basket2)); 
     }
 
      public static long minCost(int[] basket1, int[] basket2) {
