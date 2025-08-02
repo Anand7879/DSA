@@ -4,7 +4,6 @@
 import java.util.*;
 
 public class Day46 {
-   public class Main {
     public static void main(String[] args) {
 
         int[] basket1 = {1, 2, 2};
@@ -12,7 +11,6 @@ public class Day46 {
 
         System.out.println(minCost(basket1, basket2)); // Output: 1
     }
-}
 
      public static long minCost(int[] basket1, int[] basket2) {
 
