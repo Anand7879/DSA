@@ -2,6 +2,19 @@ import java.util.Arrays;
 import java.util.Comparator;
 
 public class Day47 {
+    public static void main(String[] args) {
+        int[][] fruits = {
+            {2, 4},
+            {4, 3},
+            {5, 2},
+            {8, 1},
+            {10, 5}
+        };
+        int startPos = 5;
+        int k = 7;
+        int result = maxTotalFruits(fruits, startPos, k);
+        System.out.println("Max fruits collected: " + result); // expected 11
+    }
      public static int maxTotalFruits(int[][] fruits, int startPos, int k) {
         // Sort by position
         Arrays.sort(fruits, Comparator.comparingInt(a -> a[0]));
@@ -98,17 +111,4 @@ public class Day47 {
     }
 
     // Example usage / test
-    public static void main(String[] args) {
-        int[][] fruits = {
-            {2, 4},
-            {4, 3},
-            {5, 2},
-            {8, 1},
-            {10, 5}
-        };
-        int startPos = 5;
-        int k = 7;
-        int result = maxTotalFruits(fruits, startPos, k);
-        System.out.println("Max fruits collected: " + result); // expected 11
-    }
 }
