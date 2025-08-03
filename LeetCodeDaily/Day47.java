@@ -3,7 +3,6 @@
 
 import java.util.Arrays;
 import java.util.Comparator;
-
 public class Day47 {
     public static void main(String[] args) {
         int[][] fruits = {
