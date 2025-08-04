@@ -8,7 +8,7 @@ public class Day48 {
     }
     }
 
-    public int totalFruit(int[] fruits) {
+    public static int totalFruit(int[] fruits) {
         if (fruits == null || fruits.length == 0) return 0;
 
         int type1 = -1, type2 = -1; // the two fruit types in window
