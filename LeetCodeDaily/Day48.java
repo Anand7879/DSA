@@ -1,6 +1,11 @@
 public class Day48 {
     public static void main(String[] args) {
-        
+        int[] fruits = {1, 2, 1};
+        System.out.println(totalFruit(fruits)); // output: 3
+
+        int[] fruits2 = {1, 2, 3, 2, 2};
+        System.out.println(totalFruit(fruits2)); // output: 4 (subarray [2,3,2,2] or [3,2,2])
+    }
     }
 
     public int totalFruit(int[] fruits) {
