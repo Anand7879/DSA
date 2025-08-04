@@ -6,8 +6,7 @@ public class Day48 {
         int[] fruits2 = {1, 2, 3, 2, 2};
         System.out.println(totalFruit(fruits2)); // output: 4 (subarray [2,3,2,2] or [3,2,2])
     }
-    }
-
+    
     public static int totalFruit(int[] fruits) {
         if (fruits == null || fruits.length == 0) return 0;
 
