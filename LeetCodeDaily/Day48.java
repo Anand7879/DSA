@@ -1,3 +1,6 @@
+//Date: 4th August 2025
+// Day: Monday
+
 public class Day48 {
     public static void main(String[] args) {
         int[] fruits = {1, 2, 1};
