@@ -5,7 +5,7 @@ public class Day49 {
     public static void main(String[] args) {
         
     }
-    public int numOfUnplacedFruits(int[] fruits, int[] baskets) {
+    public static int numOfUnplacedFruits(int[] fruits, int[] baskets) {
         int n = fruits.length;
         boolean[] used = new boolean[n];
         int unplaced = 0;
