@@ -3,7 +3,9 @@
 
 public class Day50 {
     public static void main(String[] args) {
-        
+        int[] fruits = {4, 2, 5};
+        int[] baskets = {3, 5, 4};
+        System.out.println(numOfUnplacedFruits(fruits, baskets));
     }
     public static int numOfUnplacedFruits(int[] fruits, int[] baskets) {
         int n = baskets.length;
