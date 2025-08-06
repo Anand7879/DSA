@@ -5,9 +5,7 @@ public class Day50 {
     public static void main(String[] args) {
         
     }
-}
-class Solution {
-    public int numOfUnplacedFruits(int[] fruits, int[] baskets) {
+    public static int numOfUnplacedFruits(int[] fruits, int[] baskets) {
         int n = baskets.length;
         int N = 1;
         while(N <= n) N <<= 1;
