@@ -6,7 +6,7 @@ public class Day51 {
         
     }
 
-    public int maxCollectedFruits(int[][] fruits) {
+    public static int maxCollectedFruits(int[][] fruits) {
         int n = fruits.length;
         
         // Calculate fruits collected by child starting from (0,0)
