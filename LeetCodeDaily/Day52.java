@@ -5,11 +5,9 @@ public class Day52 {
     public static void main(String[] args) {
         
     }
-}
-class Solution {
     private Double[][] memo;
     
-    public double soupServings(int n) {
+    public static double soupServings(int n) {
         // Optimization: For large n, the probability approaches 1
         // This is because soup A is served more frequently than soup B
         if (n >= 4800) return 1.0;
