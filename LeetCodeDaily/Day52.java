@@ -5,7 +5,7 @@ public class Day52 {
     public static void main(String[] args) {
         
     }
-    private Double[][] memo;
+    private static Double[][] memo;
     
     public static double soupServings(int n) {
         // Optimization: For large n, the probability approaches 1
@@ -20,7 +20,7 @@ public class Day52 {
         return solve(units, units);
     }
     
-    private double solve(int a, int b) {
+    private static double solve(int a, int b) {
         // Base cases
         if (a <= 0 && b <= 0) return 0.5; // Both empty at same time
         if (a <= 0) return 1.0;           // A empty first
