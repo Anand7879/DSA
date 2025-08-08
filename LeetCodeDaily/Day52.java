@@ -3,7 +3,8 @@
 
 public class Day52 {
     public static void main(String[] args) {
-        
+        int n = 50;
+        System.out.println(soupServings(n));
     }
     private static Double[][] memo;
     
