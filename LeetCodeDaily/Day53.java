@@ -1,10 +1,17 @@
 //Date: 9th August 2025
 // Day: Saturday
 public class Day53 {
-    
+    public static void main(String[] args) {
+        // Test cases
+        int[] testCases = {1, 2, 3, 4, 5, 8, 16, 17, 32, -16, 0};
+        
+        for (int n : testCases) {
+            System.out.println("n = " + n + " -> " + isPowerOfTwo(n));
+        }
+    }   
     // Method 1: Bit Manipulation (Most Optimal)
     // Time: O(1), Space: O(1)
-    public boolean isPowerOfTwo(int n) {
+    public static boolean isPowerOfTwo(int n) {
         // A power of 2 has exactly one bit set
         // n & (n-1) removes the rightmost set bit
         // For powers of 2, this results in 0
