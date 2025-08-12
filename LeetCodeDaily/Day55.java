@@ -6,7 +6,6 @@ public class Day55 {
     public static void main(String[] args) {
         int n = 15;
         int [][] queries = {{0,1},{2,2},{0,3}};
-        System.out.println(prproductQueries(n, queries));
     }
 
      private static final int MOD = 1_000_000_007;
