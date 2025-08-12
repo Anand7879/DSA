@@ -1,12 +1,12 @@
 //Date: 11th August 2025
 // Day: Monday
+import java.util.*;
 public class Day55 {
     
     public static void main(String[] args) {
         
     }
-}
-public class Solution {
+
      private static final int MOD = 1_000_000_007;
     
     public int[] productQueries(int n, int[][] queries) {
