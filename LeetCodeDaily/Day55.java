@@ -46,7 +46,7 @@ public class Day55 {
         return result;
     }
     
-    private long fastPower(long base, int exp, int mod) {
+    private static long fastPower(long base, int exp, int mod) {
         long result = 1;
         base %= mod;
         

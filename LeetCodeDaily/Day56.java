@@ -6,5 +6,25 @@ public class Day56 {
     public static void main(String[] args) {
         
     }
+
+    public static int numberOfWays(int n, int x) {
+        int MOD = 1_000_000_007;
+        
+        int[] dp = new int[n + 1];
+        dp[0] = 1;
+        
+        int base = 1;
+        while (true) {
+            int power = (int) Math.pow(base, x);
+            if (power > n) break;
+            
+            for (int sum = n; sum >= power; sum--) {
+                dp[sum] = (dp[sum] + dp[sum - power]) % MOD;
+            }
+            base++;
+        }
+        
+        return dp[n];
+    }
 }
 
