@@ -4,7 +4,8 @@
 public class Day56 {
 
     public static void main(String[] args) {
-        
+        int n = 5,x=6;
+        System.out.println(numberOfWays(n, x));
     }
 
     public static int numberOfWays(int n, int x) {
