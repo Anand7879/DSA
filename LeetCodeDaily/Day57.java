@@ -1,7 +1,13 @@
 public class Day57 {
     public static void main(String[] args) {
          int[] testCases = {1, 3, 9, 27, 0, -1, 2, 4, 6, 243, 244};
-         System.out.println(isPowerOfThreeOptimal(0));
+
+          for (int n : testCases) {
+            boolean opt = isPowerOfThreeOptimal(n);
+            System.out.println(opt);
+            System.out.println();
+          
+        }
        
     }
       public static boolean isPowerOfThreeOptimal(int n) {
