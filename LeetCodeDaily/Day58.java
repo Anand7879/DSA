@@ -5,7 +5,6 @@ public class Day58 {
         System.out.println(largestGoodInteger("42352338"));   // ""
         System.out.println(largestGoodInteger("222"));        // "222"
     }
-    }
 
     public static String largestGoodInteger(String num) {
          char maxDigit = 0; // Initialize to null character
