@@ -1,6 +1,10 @@
 public class Day58 {
     public static void main(String[] args) {
-        
+          System.out.println(largestGoodInteger("6777133339")); // "777"
+        System.out.println(largestGoodInteger("2300019"));    // "000"
+        System.out.println(largestGoodInteger("42352338"));   // ""
+        System.out.println(largestGoodInteger("222"));        // "222"
+    }
     }
 
     public static String largestGoodInteger(String num) {
