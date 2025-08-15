@@ -5,9 +5,6 @@ public class Day59 {
         // Test cases
         int[] testCases = {1, 2, 4, 8, 16, 64, 256, 1024, 5, 0, -1};
         
-        System.out.println("Testing isPowerOfFour methods:");
-        System.out.println("n\tMath\tBitwise\tIterative\tModulo");
-        
         for (int n : testCases) {
             boolean modulo = isPowerOfFourModulo(n);
             
