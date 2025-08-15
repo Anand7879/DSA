@@ -2,8 +2,6 @@ public class Day59 {
     
     // Test method
     public static void main(String[] args) {
-        Solution sol = new Solution();
-        
         // Test cases
         int[] testCases = {1, 2, 4, 8, 16, 64, 256, 1024, 5, 0, -1};
         
