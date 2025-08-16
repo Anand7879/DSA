@@ -1,6 +1,5 @@
 //Date: 15th August 2025
 // Day: Friday
-
 public class Day59 {
     
     // Test method
