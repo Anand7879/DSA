@@ -1,9 +1,10 @@
 public class Day60 {
     public static void main(String[] args) {
-        
+        int num = 99663;
+        System.out.println(maximum69Number(num));
     }
 
-    public int maximum69Number(int num) {
+    public static int maximum69Number(int num) {
         int temp = num;
         int digitPosition = 0;
         int sixPosition = -1;
