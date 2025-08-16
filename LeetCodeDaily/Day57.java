@@ -1,3 +1,6 @@
+//Date: 13th August 2025
+// Day: Wednesday
+
 public class Day57 {
     public static void main(String[] args) {
          int[] testCases = {1, 3, 9, 27, 0, -1, 2, 4, 6, 243, 244};
