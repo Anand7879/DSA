@@ -3,7 +3,9 @@
 
 public class Day61 {
     public static void main(String[] args) {
-        
+          double result3 = new21Game(21, 17, 10);
+        System.out.printf("Test 3: %.5f (Expected: 0.73278)%n", result3);
+    
     }
 
     public static double new21Game(int n, int k, int maxPts) {
