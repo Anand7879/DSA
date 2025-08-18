@@ -4,6 +4,7 @@ import java.util.*;
 public class Day62 {
     public static void main(String[] args) {
         int[] cards = {4,1,8,7};
+        System.out.println(judgePoint24(cards));
     }
 
     private static final double EPS = 1e-6;
