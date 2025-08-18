@@ -1,15 +1,14 @@
 //Date: 18th August 2025
 // Day: Moday
-
+import java.util.*;
 public class Day62 {
     public static void main(String[] args) {
-        
+        int[] cards = {4,1,8,7};
     }
-}
-public class Solution {
+
     private static final double EPS = 1e-6;
     
-    public boolean judgePoint24(int[] cards) {
+    public static boolean judgePoint24(int[] cards) {
         List<Double> nums = new ArrayList<>();
         for (int card : cards) {
             nums.add((double) card);
@@ -17,7 +16,7 @@ public class Solution {
         return backtrack(nums);
     }
     
-    private boolean backtrack(List<Double> nums) {
+    private static boolean backtrack(List<Double> nums) {
         // Base case: if only one number left, check if it's close to 24
         if (nums.size() == 1) {
             return Math.abs(nums.get(0) - 24) < EPS;
