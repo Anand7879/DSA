@@ -1,5 +1,6 @@
 //Date: 17th August 2025
 // Day: Sunday
+
 public class Day61 {
     public static void main(String[] args) {
           double result3 = new21Game(21, 17, 10);
