@@ -1,6 +1,7 @@
 public class Day63 {
     public static void main(String[] args) {
-        
+        int[] nums = {2,5,3,4};
+        System.out.println(zeroFilledSubarray(nums));
     }
  public static long zeroFilledSubarray(int[] nums) {
         long result = 0;
