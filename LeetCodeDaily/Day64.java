@@ -1,6 +1,11 @@
 public class Day64 {
     public static void main(String[] args) {
-        
+        int[][] matrix = {
+                          {0,1,1,1},
+                          {1,1,1,1},
+                          {0,1,1,1}
+                        };
+        System.out.println(countSquares(matrix));                
     }
 
     public static int countSquares(int[][] matrix) {
