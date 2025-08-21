@@ -6,9 +6,8 @@ public class Day65 {
         
     }
 
-}
-
- int m = mat.length;
+    public static int numSubmat(int[][] mat) {
+         int m = mat.length;
         int n = mat[0].length;
         int result = 0;
         
@@ -37,3 +36,5 @@ public class Day65 {
         }
         
         return result;
+    }
+}
