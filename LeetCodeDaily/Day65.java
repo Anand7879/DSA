@@ -3,7 +3,8 @@
 
 public class Day65 {
     public static void main(String[] args) {
-        
+        int[][] mat = {{1,0,1},{1,1,0},{1,1,0}};
+        System.out.println(numSubmat(mat));
     }
 
     public static int numSubmat(int[][] mat) {
