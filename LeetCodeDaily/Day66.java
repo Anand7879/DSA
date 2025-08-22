@@ -1,6 +1,7 @@
 public class Day66 {
    public static void main(String[] args) {
-    
+     int[][] grid1 = {{0,1,0},{1,0,1}};
+        System.out.println(minimumArea(grid1)); // Expected: 6
    } 
 
     public static int minimumArea(int[][] grid) {
