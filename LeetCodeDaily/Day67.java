@@ -6,7 +6,7 @@ public class Day67 {
     private static final int INF = 1 << 30;
     
     public static void main(String[] args) {
-        
+         int[][] grid = {{1,0,1},{1,1,1}};
     }
     
     public int minimumSum(int[][] grid) {
