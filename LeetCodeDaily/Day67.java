@@ -1,16 +1,14 @@
-//Date: 22th August 2025
-// Day: Saturday
-
 public class Day67 {
-    private int[][] grid;
+    private static int[][] grid;
     private static final int INF = 1 << 30;
     
     public static void main(String[] args) {
-         int[][] grid = {{1,0,1},{1,1,1}};
+        int[][] testGrid = {{1,0,1},{1,1,1}};
+        System.out.println(minimumSum(testGrid));
     }
     
-    public int minimumSum(int[][] grid) {
-        this.grid = grid;
+    public static int minimumSum(int[][] inputGrid) {
+        grid = inputGrid;  // Fixed: proper assignment to static field
         int m = grid.length;
         int n = grid[0].length;
         int ans = m * n; // Initialize with maximum possible area
@@ -74,9 +72,9 @@ public class Day67 {
     }
     
     // Helper function to calculate minimum rectangle area covering all 1s in subgrid
-    private int f(int i1, int j1, int i2, int j2) {
+    private static int f(int i1, int j1, int i2, int j2) {
         int minX = INF, minY = INF;
-        int maxX = -INF, maxY = -INF;
+        int maxX = -1, maxY = -1;  // Fixed: proper initialization for max values
         
         // Find bounding box of all 1s in the specified subgrid
         for (int i = i1; i <= i2; i++) {
