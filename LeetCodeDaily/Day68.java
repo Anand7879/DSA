@@ -2,9 +2,8 @@ public class Day68 {
     public static void main(String[] args) {
         
     }
-}
-class Solution {
-    public int longestSubarray(int[] nums) {
+
+    public static int longestSubarray(int[] nums) {
          int maxLen = 0;
         int left = 0;
         int zeroIndex = -1;
