@@ -1,6 +1,7 @@
 public class Day68 {
     public static void main(String[] args) {
-        
+         int[] nums1 = {1, 1, 0, 1};
+         System.out.println(longestSubarray(nums1));
     }
 
     public static int longestSubarray(int[] nums) {
